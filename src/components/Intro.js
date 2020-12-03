@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Typography, Fade } from '@material-ui/core';
+import { Typography, Fade, Link } from '@material-ui/core';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 
 import introBackground from '../assets/intro-background.gif';
@@ -63,7 +63,9 @@ const Intro = () => {
           <Typography className={classes.sub}>
             Full Stack Web Developer
           </Typography>
-          <KeyboardArrowDownIcon className={classes.arrow} />
+          <Link href='#about' style={{ color: 'white' }}>
+            <KeyboardArrowDownIcon className={classes.arrow} />
+          </Link>
         </div>
       </Fade>
     </div>
