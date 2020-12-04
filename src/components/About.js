@@ -85,8 +85,8 @@ const About = () => {
             <Typography className={classes.text}>
               Hey there! 👋 My name is Jacob Tran and I graduated from the
               University of California, Irvine with a degree in business
-              economics. After graduating I quickly realized economics was not a
-              field I wanted to pursue so I attended the{' '}
+              economics. After graduating, I quickly realized economics was not
+              a field I wanted to pursue so I attended the{' '}
               <Link href='https://bootcamp.ce.uci.edu/coding/'>
                 UCI Full Stack Bootcamp
               </Link>{' '}
