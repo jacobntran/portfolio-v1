@@ -57,7 +57,7 @@ const Intro = () => {
 
   return (
     <div className={classes.root}>
-      <Fade in timeout={4000}>
+      <Fade in timeout={3000}>
         <div className={classes.header}>
           <Typography className={classes.main}>Jacob Tran</Typography>
           <Typography className={classes.sub}>

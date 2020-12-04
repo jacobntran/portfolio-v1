@@ -1,10 +1,11 @@
 import './App.css';
 import { ThemeProvider } from '@material-ui/core/styles';
-import { CssBaseline, Container } from '@material-ui/core';
+import { CssBaseline } from '@material-ui/core';
 
 import theme from './theme';
 import Intro from './components/Intro';
 import About from './components/About';
+import Projects from './components/Projects';
 
 function App() {
   return (
@@ -12,9 +13,8 @@ function App() {
       <CssBaseline />
       <div className='App'>
         <Intro />
-        <Container maxWidth='lg'>
-          <About />
-        </Container>
+        <About />
+        <Projects />
       </div>
     </ThemeProvider>
   );
