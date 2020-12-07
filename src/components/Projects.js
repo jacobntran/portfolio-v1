@@ -12,13 +12,27 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     backgroundColor: theme.palette.background.paper,
     padding: '4.5rem 0',
+    [theme.breakpoints.down('md')]: {
+      padding: '3.6rem 0',
+    },
+    [theme.breakpoints.down('sm')]: {
+      padding: '3rem 0',
+    },
   },
   header: {
     color: theme.palette.primary.main,
     fontWeight: '400',
     letterSpacing: '0.2rem',
     textAlign: 'center',
-    marginBottom: '3rem',
+    marginBottom: '2.5rem',
+    [theme.breakpoints.down('md')]: {
+      fontSize: '3rem',
+      marginBottom: '2rem',
+    },
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '2.5rem',
+      marginBottom: '2rem',
+    },
   },
 }));
 
@@ -78,20 +92,19 @@ const Projects = () => {
         <Typography variant='h2' className={classes.header}>
           Projects
         </Typography>
-        <div style={{ marginTop: '1.5rem' }}>
-          {projects.map((project) => {
-            return (
-              <ProjectDisplay
-                name={project.name}
-                description={project.description}
-                component={project.icon}
-                github={project.github}
-                website={project.website}
-                tech={project.tech}
-              />
-            );
-          })}
-        </div>
+        {projects.map((project) => {
+          return (
+            <ProjectDisplay
+              name={project.name}
+              description={project.description}
+              component={project.icon}
+              github={project.github}
+              website={project.website}
+              tech={project.tech}
+              key={project.name}
+            />
+          );
+        })}
       </Container>
     </div>
   );

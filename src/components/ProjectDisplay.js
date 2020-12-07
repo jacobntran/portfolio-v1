@@ -9,6 +9,9 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     marginBottom: '3.5rem',
+    [theme.breakpoints.down('sm')]: {
+      marginBottom: '2.5rem',
+    },
   },
   icon_main: {
     width: '17rem',
@@ -21,14 +24,39 @@ const useStyles = makeStyles((theme) => ({
       transform: ' translateY(-0.2rem)',
       transition: '0.5s',
     },
+    [theme.breakpoints.down('md')]: {
+      width: '13rem',
+      height: '13rem',
+    },
+    [theme.breakpoints.down('sm')]: {
+      display: 'none',
+    },
+  },
+  textContainer: {
+    marginLeft: '7rem',
+    [theme.breakpoints.down('md')]: {
+      marginLeft: '4rem',
+    },
+    [theme.breakpoints.down('sm')]: {
+      margin: '0 1rem',
+    },
   },
   title: {
     letterSpacing: '0.1rem',
     fontWeight: '500',
+    [theme.breakpoints.down('md')]: {
+      fontSize: '1.3rem',
+    },
   },
   text_main: {
     fontSize: '1.1rem',
     lineHeight: '2rem',
+    [theme.breakpoints.down('md')]: {
+      fontSize: '1rem',
+    },
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '0.9rem',
+    },
   },
   text_sub: {
     color: theme.palette.primary.main,
@@ -62,7 +90,7 @@ const ProjectDisplay = ({
         container
         direction='column'
         spacing={1}
-        style={{ marginLeft: '7rem' }}
+        className={classes.textContainer}
       >
         <Grid item>
           <Typography variant='h5' color='primary' className={classes.title}>

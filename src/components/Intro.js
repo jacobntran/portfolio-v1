@@ -17,6 +17,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: 'no-repeat',
     backgroundAttachment: 'fixed',
     backgroundSize: 'cover',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   header: {
     textAlign: 'center',
@@ -24,13 +27,24 @@ const useStyles = makeStyles((theme) => ({
   main: {
     fontWeight: 400,
     letterSpacing: '0.4rem',
-    paddingTop: '12rem',
     fontSize: '7rem',
+    [theme.breakpoints.down('md')]: {
+      fontSize: '4.5rem',
+    },
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '3.2rem',
+    },
   },
   sub: {
     fontWeight: 300,
     letterSpacing: '0.2rem',
     fontSize: '3rem',
+    [theme.breakpoints.down('md')]: {
+      fontSize: '1.9rem',
+    },
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1.3rem',
+    },
   },
   arrow: {
     '-moz-animation': '$bounce 2s infinite',
@@ -38,6 +52,14 @@ const useStyles = makeStyles((theme) => ({
     animation: '$bounce 2s infinite',
     fontSize: '5rem',
     marginTop: '3rem',
+    [theme.breakpoints.down('md')]: {
+      fontSize: '3.5rem',
+      marginTop: '2rem',
+    },
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '2.5rem',
+      marginTop: '2rem',
+    },
   },
   '@keyframes bounce': {
     ' 0%, 20%, 50%, 80%, 100% ': {

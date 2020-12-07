@@ -9,38 +9,83 @@ import gradPhoto from '../assets/grad-image.JPG';
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
-    margin: '4.5rem 0',
+    padding: '4.5rem 0',
+    [theme.breakpoints.down('md')]: {
+      padding: '3.6rem 0',
+    },
+    [theme.breakpoints.down('sm')]: {
+      display: 'flex',
+      flexDirection: 'column',
+      padding: '3rem 0',
+    },
   },
   header: {
     color: theme.palette.primary.main,
     fontWeight: '400',
     letterSpacing: '0.2rem',
     textAlign: 'center',
+    marginBottom: '2.5rem',
+    [theme.breakpoints.down('md')]: {
+      fontSize: '3rem',
+      marginBottom: '2rem',
+    },
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '2.5rem',
+      marginBottom: '2rem',
+    },
   },
   container: {
     display: 'flex',
-    marginTop: '3rem',
     color: theme.palette.text.secondary,
     alignItems: 'center',
+    // [theme.breakpoints.down('md')]: {
+    //   margin: '0 0.5rem',
+    // },
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'column',
+    },
   },
   image: {
     width: '20rem',
     height: '20rem',
     borderRadius: '50%',
     objectFit: 'cover',
+    [theme.breakpoints.down('md')]: {
+      width: '16rem',
+      height: '16rem',
+    },
+    [theme.breakpoints.down('sm')]: {
+      width: '12rem',
+      height: '12rem',
+    },
   },
   body: {
     marginLeft: '8rem',
     display: 'flex',
     flexDirection: 'column',
+    [theme.breakpoints.down('md')]: {
+      marginLeft: '4rem',
+    },
+    [theme.breakpoints.down('sm')]: {
+      margin: '2rem 1rem 0rem 1rem',
+    },
   },
   text: {
     fontSize: '1.1rem',
     lineHeight: '2rem',
+    [theme.breakpoints.down('md')]: {
+      fontSize: '1rem',
+    },
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '0.9rem',
+    },
   },
   extra: {
     display: 'flex',
     marginTop: '1rem',
+    [theme.breakpoints.down('sm')]: {
+      marginTop: '0.5rem',
+    },
   },
   list: {
     display: 'inline-block',
@@ -48,6 +93,12 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.main,
     fontWeight: '300',
     fontSize: '1.1rem',
+    [theme.breakpoints.down('md')]: {
+      fontSize: '1rem',
+    },
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '0.9rem',
+    },
   },
   icon: {
     transform: 'translateY(0)',
@@ -58,6 +109,9 @@ const useStyles = makeStyles((theme) => ({
       color: theme.palette.primary.main,
       transform: ' translateY(-0.2rem)',
       transition: '0.5s',
+    },
+    [theme.breakpoints.down('sm')]: {
+      size: 'small',
     },
   },
 }));
